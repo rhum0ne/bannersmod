@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
-	"textures": {
-		"0": "block/lannister",
-		"1": "block/texture",
-		"particle": "house-lannister-179923"
-	},
+        "textures": {
+                "0": "banners:block/lannister",
+                "1": "banners:block/texture",
+                "particle": "banners:block/lannister"
+        },
 	"elements": [
 		{
 			"from": [2.5, 23.8, 14.2],
