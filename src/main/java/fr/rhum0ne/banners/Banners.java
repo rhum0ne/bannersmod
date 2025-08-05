@@ -57,6 +57,9 @@ public class Banners {
     public static final RegistryObject<Item> TYRELL_BANNER_ITEM = ITEMS.register("tyrell_banner", () -> new BlockItem(TYRELL_BANNER.get(), new Item.Properties()));
     public static final RegistryObject<Block> VELARYON_BANNER = BLOCKS.register("velaryon_banner", () -> new TemplateBannerBlock());
     public static final RegistryObject<Item> VELARYON_BANNER_ITEM = ITEMS.register("velaryon_banner", () -> new BlockItem(VELARYON_BANNER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_COIN = ITEMS.register("bronze_coin", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_COIN = ITEMS.register("silver_coin", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_COIN = ITEMS.register("gold_coin", () -> new Item(new Item.Properties()));
     public static final RegistryObject<BannerPattern> LANNISTER_PATTERN =
             BANNER_PATTERNS.register("lannister",
                     () -> new BannerPattern(Banners.MODID + ":lannister"));
@@ -200,6 +203,9 @@ public class Banners {
             event.accept(TARGARYEN_BANNER_PATTERN_ITEM);
             event.accept(TYRELL_BANNER_PATTERN_ITEM);
             event.accept(VELARYON_BANNER_PATTERN_ITEM);
+            event.accept(BRONZE_COIN);
+            event.accept(SILVER_COIN);
+            event.accept(GOLD_COIN);
         }
     }
 }
