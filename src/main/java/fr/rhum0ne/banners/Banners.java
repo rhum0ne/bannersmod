@@ -94,7 +94,6 @@ public class Banners {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(TEMPLATE_BANNER_ITEM);
             event.accept(LANNISTER_BANNER_ITEM);
             event.accept(MAISON_TULLY_BANNER_ITEM);
             event.accept(ARRYN_BANNER_ITEM);
