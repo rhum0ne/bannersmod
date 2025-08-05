@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "banners:block/tyrell_banner" },
+    "facing=east":  { "model": "banners:block/tyrell_banner", "y": 90 },
+    "facing=south": { "model": "banners:block/tyrell_banner", "y": 180 },
+    "facing=west":  { "model": "banners:block/tyrell_banner", "y": 270 }
+  }
+}
