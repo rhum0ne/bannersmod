@@ -26,6 +26,10 @@ public class Banners {
     // Register a simple banner block and its item as an example template
     public static final RegistryObject<Block> TEMPLATE_BANNER = BLOCKS.register("template_banner", () -> new TemplateBannerBlock());
     public static final RegistryObject<Item> TEMPLATE_BANNER_ITEM = ITEMS.register("template_banner", () -> new BlockItem(TEMPLATE_BANNER.get(), new Item.Properties()));
+    public static final RegistryObject<Block> LANNISTER_BANNER = BLOCKS.register("lannister_banner", () -> new TemplateBannerBlock());
+    public static final RegistryObject<Item> LANNISTER_BANNER_ITEM = ITEMS.register("lannister_banner", () -> new BlockItem(LANNISTER_BANNER.get(), new Item.Properties()));
+    public static final RegistryObject<Block> MAISON_TULLY_BANNER = BLOCKS.register("maison_tully_banner", () -> new TemplateBannerBlock());
+    public static final RegistryObject<Item> MAISON_TULLY_BANNER_ITEM = ITEMS.register("maison_tully_banner", () -> new BlockItem(MAISON_TULLY_BANNER.get(), new Item.Properties()));
 
     public Banners() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -41,6 +45,8 @@ public class Banners {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TEMPLATE_BANNER_ITEM);
+            event.accept(LANNISTER_BANNER_ITEM);
+            event.accept(MAISON_TULLY_BANNER_ITEM);
         }
     }
 }
