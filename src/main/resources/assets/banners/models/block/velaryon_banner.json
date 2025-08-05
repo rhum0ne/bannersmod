@@ -1,0 +1,7 @@
+{
+  "parent": "banners:block/template_banner",
+  "textures": {
+    "1": "banners:block/texture",
+    "2": "banners:block/velaryon"
+  }
+}
