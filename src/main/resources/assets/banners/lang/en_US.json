@@ -1,3 +1,5 @@
 {
-  "block.banners.template_banner": "Template Banner"
+  "block.banners.template_banner": "Template Banner",
+  "block.banners.lannister_banner": "Lannister Banner",
+  "block.banners.maison_tully_banner": "Maison Tully Banner"
 }

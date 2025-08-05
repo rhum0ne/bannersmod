@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "banners:block/lannister_banner" },
+    "facing=east":  { "model": "banners:block/lannister_banner", "y": 90 },
+    "facing=south": { "model": "banners:block/lannister_banner", "y": 180 },
+    "facing=west":  { "model": "banners:block/lannister_banner", "y": 270 }
+  }
+}
