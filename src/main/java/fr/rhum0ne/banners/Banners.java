@@ -64,11 +64,61 @@ public class Banners {
     public static final RegistryObject<BannerPattern> MAISON_TULLY_PATTERN =
             BANNER_PATTERNS.register("maison_tully",
                     () -> new BannerPattern(Banners.MODID + ":maison_tully"));
+    public static final RegistryObject<BannerPattern> ARRYN_PATTERN =
+            BANNER_PATTERNS.register("arryn",
+                    () -> new BannerPattern(Banners.MODID + ":arryn"));
+    public static final RegistryObject<BannerPattern> BARATHEON_PATTERN =
+            BANNER_PATTERNS.register("baratheon",
+                    () -> new BannerPattern(Banners.MODID + ":baratheon"));
+    public static final RegistryObject<BannerPattern> BARATHEON_DE_PEYREDRAGON_PATTERN =
+            BANNER_PATTERNS.register("baratheon_de_peyredragon",
+                    () -> new BannerPattern(Banners.MODID + ":baratheon_de_peyredragon"));
+    public static final RegistryObject<BannerPattern> FORESTIER_PATTERN =
+            BANNER_PATTERNS.register("forestier",
+                    () -> new BannerPattern(Banners.MODID + ":forestier"));
+    public static final RegistryObject<BannerPattern> GREYJOY_PATTERN =
+            BANNER_PATTERNS.register("greyjoy",
+                    () -> new BannerPattern(Banners.MODID + ":greyjoy"));
+    public static final RegistryObject<BannerPattern> MARTELL_PATTERN =
+            BANNER_PATTERNS.register("martell",
+                    () -> new BannerPattern(Banners.MODID + ":martell"));
+    public static final RegistryObject<BannerPattern> STARK_PATTERN =
+            BANNER_PATTERNS.register("stark",
+                    () -> new BannerPattern(Banners.MODID + ":stark"));
+    public static final RegistryObject<BannerPattern> TARGARYEN_PATTERN =
+            BANNER_PATTERNS.register("targaryen",
+                    () -> new BannerPattern(Banners.MODID + ":targaryen"));
+    public static final RegistryObject<BannerPattern> TYRELL_PATTERN =
+            BANNER_PATTERNS.register("tyrell",
+                    () -> new BannerPattern(Banners.MODID + ":tyrell"));
+    public static final RegistryObject<BannerPattern> VELARYON_PATTERN =
+            BANNER_PATTERNS.register("velaryon",
+                    () -> new BannerPattern(Banners.MODID + ":velaryon"));
     public static final TagKey<BannerPattern> LANNISTER_PATTERN_ITEM_TAG =
             TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/lannister"));
 
     public static final TagKey<BannerPattern> MAISON_TULLY_PATTERN_ITEM_TAG =
             TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/maison_tully"));
+    public static final TagKey<BannerPattern> ARRYN_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/arryn"));
+    public static final TagKey<BannerPattern> BARATHEON_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/baratheon"));
+    public static final TagKey<BannerPattern> BARATHEON_DE_PEYREDRAGON_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/baratheon_de_peyredragon"));
+    public static final TagKey<BannerPattern> FORESTIER_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/forestier"));
+    public static final TagKey<BannerPattern> GREYJOY_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/greyjoy"));
+    public static final TagKey<BannerPattern> MARTELL_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/martell"));
+    public static final TagKey<BannerPattern> STARK_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/stark"));
+    public static final TagKey<BannerPattern> TARGARYEN_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/targaryen"));
+    public static final TagKey<BannerPattern> TYRELL_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/tyrell"));
+    public static final TagKey<BannerPattern> VELARYON_PATTERN_ITEM_TAG =
+            TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(MODID, "pattern_item/velaryon"));
 
     public static final RegistryObject<Item> LANNISTER_BANNER_PATTERN_ITEM =
             ITEMS.register("lannister_banner_pattern",
@@ -77,6 +127,36 @@ public class Banners {
     public static final RegistryObject<Item> MAISON_TULLY_BANNER_PATTERN_ITEM =
             ITEMS.register("maison_tully_banner_pattern",
                     () -> new BannerPatternItem(MAISON_TULLY_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ARRYN_BANNER_PATTERN_ITEM =
+            ITEMS.register("arryn_banner_pattern",
+                    () -> new BannerPatternItem(ARRYN_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BARATHEON_BANNER_PATTERN_ITEM =
+            ITEMS.register("baratheon_banner_pattern",
+                    () -> new BannerPatternItem(BARATHEON_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BARATHEON_DE_PEYREDRAGON_BANNER_PATTERN_ITEM =
+            ITEMS.register("baratheon_de_peyredragon_banner_pattern",
+                    () -> new BannerPatternItem(BARATHEON_DE_PEYREDRAGON_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> FORESTIER_BANNER_PATTERN_ITEM =
+            ITEMS.register("forestier_banner_pattern",
+                    () -> new BannerPatternItem(FORESTIER_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GREYJOY_BANNER_PATTERN_ITEM =
+            ITEMS.register("greyjoy_banner_pattern",
+                    () -> new BannerPatternItem(GREYJOY_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MARTELL_BANNER_PATTERN_ITEM =
+            ITEMS.register("martell_banner_pattern",
+                    () -> new BannerPatternItem(MARTELL_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STARK_BANNER_PATTERN_ITEM =
+            ITEMS.register("stark_banner_pattern",
+                    () -> new BannerPatternItem(STARK_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TARGARYEN_BANNER_PATTERN_ITEM =
+            ITEMS.register("targaryen_banner_pattern",
+                    () -> new BannerPatternItem(TARGARYEN_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TYRELL_BANNER_PATTERN_ITEM =
+            ITEMS.register("tyrell_banner_pattern",
+                    () -> new BannerPatternItem(TYRELL_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> VELARYON_BANNER_PATTERN_ITEM =
+            ITEMS.register("velaryon_banner_pattern",
+                    () -> new BannerPatternItem(VELARYON_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
 
 
     public Banners() {
@@ -110,6 +190,16 @@ public class Banners {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(LANNISTER_BANNER_PATTERN_ITEM);
             event.accept(MAISON_TULLY_BANNER_PATTERN_ITEM);
+            event.accept(ARRYN_BANNER_PATTERN_ITEM);
+            event.accept(BARATHEON_BANNER_PATTERN_ITEM);
+            event.accept(BARATHEON_DE_PEYREDRAGON_BANNER_PATTERN_ITEM);
+            event.accept(FORESTIER_BANNER_PATTERN_ITEM);
+            event.accept(GREYJOY_BANNER_PATTERN_ITEM);
+            event.accept(MARTELL_BANNER_PATTERN_ITEM);
+            event.accept(STARK_BANNER_PATTERN_ITEM);
+            event.accept(TARGARYEN_BANNER_PATTERN_ITEM);
+            event.accept(TYRELL_BANNER_PATTERN_ITEM);
+            event.accept(VELARYON_BANNER_PATTERN_ITEM);
         }
     }
 }
