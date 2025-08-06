@@ -3,13 +3,13 @@ package fr.rhum0ne.banners;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BannerPatternItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.core.registries.Registries;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -17,6 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import fr.rhum0ne.banners.block.TemplateBannerBlock;
+import net.minecraft.network.chat.Component;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Banners.MODID)
@@ -30,6 +31,8 @@ public class Banners {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     // Create a Deferred Register to hold Banner Patterns which will all be registered under the "banners" namespace
     public static final DeferredRegister<BannerPattern> BANNER_PATTERNS = DeferredRegister.create(Registries.BANNER_PATTERN, MODID);
+    // Create a Deferred Register to hold Creative Mode Tabs for this mod
+    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     // Register a simple banner block and its item as an example template
     public static final RegistryObject<Block> TEMPLATE_BANNER = BLOCKS.register("template_banner", () -> new TemplateBannerBlock());
     public static final RegistryObject<Item> TEMPLATE_BANNER_ITEM = ITEMS.register("template_banner", () -> new BlockItem(TEMPLATE_BANNER.get(), new Item.Properties()));
@@ -161,6 +164,42 @@ public class Banners {
             ITEMS.register("velaryon_banner_pattern",
                     () -> new BannerPatternItem(VELARYON_PATTERN_ITEM_TAG, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<CreativeModeTab> BANNERS_TAB = TABS.register("banners_tab",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.banners"))
+                    .icon(() -> new ItemStack(LANNISTER_BANNER_ITEM.get()))
+                    .displayItems((parameters, output) -> {
+                        output.accept(TEMPLATE_BANNER_ITEM.get());
+                        output.accept(LANNISTER_BANNER_ITEM.get());
+                        output.accept(MAISON_TULLY_BANNER_ITEM.get());
+                        output.accept(ARRYN_BANNER_ITEM.get());
+                        output.accept(BARATHEON_BANNER_ITEM.get());
+                        output.accept(BARATHEON_DE_PEYREDRAGON_BANNER_ITEM.get());
+                        output.accept(FORESTIER_BANNER_ITEM.get());
+                        output.accept(GREYJOY_BANNER_ITEM.get());
+                        output.accept(MARTELL_BANNER_ITEM.get());
+                        output.accept(STARK_BANNER_ITEM.get());
+                        output.accept(TARGARYEN_BANNER_ITEM.get());
+                        output.accept(TYRELL_BANNER_ITEM.get());
+                        output.accept(VELARYON_BANNER_ITEM.get());
+                        output.accept(LANNISTER_BANNER_PATTERN_ITEM.get());
+                        output.accept(MAISON_TULLY_BANNER_PATTERN_ITEM.get());
+                        output.accept(ARRYN_BANNER_PATTERN_ITEM.get());
+                        output.accept(BARATHEON_BANNER_PATTERN_ITEM.get());
+                        output.accept(BARATHEON_DE_PEYREDRAGON_BANNER_PATTERN_ITEM.get());
+                        output.accept(FORESTIER_BANNER_PATTERN_ITEM.get());
+                        output.accept(GREYJOY_BANNER_PATTERN_ITEM.get());
+                        output.accept(MARTELL_BANNER_PATTERN_ITEM.get());
+                        output.accept(STARK_BANNER_PATTERN_ITEM.get());
+                        output.accept(TARGARYEN_BANNER_PATTERN_ITEM.get());
+                        output.accept(TYRELL_BANNER_PATTERN_ITEM.get());
+                        output.accept(VELARYON_BANNER_PATTERN_ITEM.get());
+                        output.accept(BRONZE_COIN.get());
+                        output.accept(SILVER_COIN.get());
+                        output.accept(GOLD_COIN.get());
+                    })
+                    .build());
+
 
     public Banners() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -171,41 +210,8 @@ public class Banners {
         ITEMS.register(modEventBus);
         // Register banner patterns
         BANNER_PATTERNS.register(modEventBus);
-        // Add items to existing creative tabs
-        modEventBus.addListener(this::addCreative);
+        // Register creative mode tabs
+        TABS.register(modEventBus);
     }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(LANNISTER_BANNER_ITEM);
-            event.accept(MAISON_TULLY_BANNER_ITEM);
-            event.accept(ARRYN_BANNER_ITEM);
-            event.accept(BARATHEON_BANNER_ITEM);
-            event.accept(BARATHEON_DE_PEYREDRAGON_BANNER_ITEM);
-            event.accept(FORESTIER_BANNER_ITEM);
-            event.accept(GREYJOY_BANNER_ITEM);
-            event.accept(MARTELL_BANNER_ITEM);
-            event.accept(STARK_BANNER_ITEM);
-            event.accept(TARGARYEN_BANNER_ITEM);
-            event.accept(TYRELL_BANNER_ITEM);
-            event.accept(VELARYON_BANNER_ITEM);
-        }
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(LANNISTER_BANNER_PATTERN_ITEM);
-            event.accept(MAISON_TULLY_BANNER_PATTERN_ITEM);
-            event.accept(ARRYN_BANNER_PATTERN_ITEM);
-            event.accept(BARATHEON_BANNER_PATTERN_ITEM);
-            event.accept(BARATHEON_DE_PEYREDRAGON_BANNER_PATTERN_ITEM);
-            event.accept(FORESTIER_BANNER_PATTERN_ITEM);
-            event.accept(GREYJOY_BANNER_PATTERN_ITEM);
-            event.accept(MARTELL_BANNER_PATTERN_ITEM);
-            event.accept(STARK_BANNER_PATTERN_ITEM);
-            event.accept(TARGARYEN_BANNER_PATTERN_ITEM);
-            event.accept(TYRELL_BANNER_PATTERN_ITEM);
-            event.accept(VELARYON_BANNER_PATTERN_ITEM);
-            event.accept(BRONZE_COIN);
-            event.accept(SILVER_COIN);
-            event.accept(GOLD_COIN);
-        }
-    }
+    
 }

@@ -50,6 +50,7 @@
   "block.banners.banner.velaryon": "Velaryon",
   "item.banners.bronze_coin": "Pièce de bronze",
   "item.banners.silver_coin": "Pièce d'argent",
-  "item.banners.gold_coin": "Pièce d'or"
+  "item.banners.gold_coin": "Pièce d'or",
+  "itemGroup.banners": "Bannières"
 }
 
