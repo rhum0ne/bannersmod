@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:paper" },
+    { "item": "minecraft:leather" }
+  ],
+  "result": { "item": "banners:baratheon_banner_pattern" }
+}

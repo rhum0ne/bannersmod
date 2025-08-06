@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    " P ",
+    "WWW"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "P": { "item": "banners:baratheon_banner_pattern" },
+    "W": { "item": "minecraft:yellow_wool" }
+  },
+  "result": { "item": "banners:baratheon_banner" }
+}
