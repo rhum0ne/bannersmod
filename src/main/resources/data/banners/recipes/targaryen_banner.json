@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    " P ",
+    "WWW"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "P": { "item": "banners:targaryen_banner_pattern" },
+    "W": { "item": "minecraft:black_wool" }
+  },
+  "result": { "item": "banners:targaryen_banner" }
+}
